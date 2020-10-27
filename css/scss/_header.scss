@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+.temp {
+  font-size: 20px;
+  .a {
+    font-weight: $EL;
+  }
+  .b {
+    font-weight: $L;
+  }
+  .c {
+    font-weight: $R;
+  }
+  .d {
+    font-weight: $M;
+  }
+  .e {
+    font-weight: $B;
+  }
+  .f {
+    font-weight: $H;
+  }
+  .g {
+    font-weight: $UH;
+  }
+}
+
+.header {
+  position: relative;
+}
+
+.header__wrapperTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__logo {
+    &-word {
+      color: $main1;
+      font-weight: $UH;
+      font-size: 30px;
+      color: $accent2;
+      text-shadow: $shadow;
+    }
+  }
+
+  // ==============================================
+  // ヘッダーロゴのカーニング調整
+  // ==============================================
+
+  .word {
+    &_1 {
+      letter-spacing: -0.015em;
+    }
+    &_2 {
+      letter-spacing: -0.02em;
+    }
+    &_3 {
+      letter-spacing: 0.05em;
+    }
+    &_4 {
+      letter-spacing: 0.05em;
+    }
+    &_5 {
+      letter-spacing: 0.05em;
+    }
+    &_6 {
+      letter-spacing: -0.015em;
+    }
+  }
+
+
+  .btn_humberger {
+    width: 38px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    > span {
+      display: block;
+      width: inherit;
+      height: 5px;
+      border-radius: 10px;
+      background-color: $accent2;
+      box-shadow: $shadow;
+    }
+  }
+}
+
+.header__wrapperBottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+}
+
+.header__sns {
+  display: flex;
+  justify-content: flex-end;
+
+  &-btn:not(:first-child) {
+    margin-left: 1em;
+  }
+
+  .fa-twitter {
+    color:$twitter;
+  }
+
+  .fa-facebook {
+    color:$facebook;
+  }
+
+  .fa-instagram {
+    color:$instagram;
+  }
+}
+
+.test {
+  height: 15000px;
+  background-color: $base;
+}
