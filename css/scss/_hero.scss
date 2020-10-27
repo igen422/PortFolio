@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+// ==============================================
+// タイトルボックス
+// ==============================================
+.hero {
+  background: rgb(217, 96, 26);
+  background: linear-gradient(
+    150deg,
+    rgba(217, 96, 26, 1) 30%,
+    rgba(242, 193, 133, 0.6) 100%
+  );
+  height: 100vh;
+  min-height: 750px;
+  position: relative;
+  z-index: 97;
+
+  &__titleBox {
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $base;
+  }
+
+  &__sub {
+    font-weight: $EL;
+    font-size: 2rem;
+    text-indent: 0.6rem;
+    letter-spacing: 0.6rem;
+    text-shadow: $shadow;
+  }
+
+  &__title {
+    line-height: 1;
+    font-size: clamp(7rem, 10vw, 15rem);
+    margin-top: 20px;
+    text-indent: 0.6rem;
+    letter-spacing: 0.6rem;
+    text-shadow: $shadow;
+  }
+}
+
+// ==============================================
+// ネギボーイのSVG読み込み
+// ==============================================
+
+.hero {
+  &::before {
+    // outline: 1px solid red;
+    content: ""; 
+    display: inline-block; 
+    background-image: url(../../img/ネギボーイL.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80%;
+    max-width: 500px;
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 98;
+    opacity: .7;
+    
+    @include mq1 {
+      width: 40%; 
+      min-width: 500px;
+      height: 700px;
+      left: 60%;
+    }
+  }
+
+  &::after {
+    // outline: 1px solid red;
+    content: ""; 
+    display: inline-block; 
+    background-image: url(../../img/ネギボーイM.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 65%;
+    max-width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: .5;
+    
+    @include mq1 {
+      width: 30%; 
+      min-width: 400px;
+      height: 500px;
+    }
+  }
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $base;
+  font-weight: $EL;
+  font-size: 2rem;
+  text-indent: .1rem;
+  letter-spacing: .1rem;
+  text-shadow: $shadow;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 110px;
+    border: 1px solid rgba($base, .5);
+    border-radius: 100px;
+    position: absolute;
+    bottom: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+

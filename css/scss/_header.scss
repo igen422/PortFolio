@@ -27,6 +27,7 @@
 
 .header {
   position: relative;
+  z-index: 99;
 }
 
 .header__wrapperTop {
@@ -42,11 +43,15 @@
 
   .header__logo {
     &-word {
-      color: $main1;
       font-weight: $UH;
-      font-size: 30px;
-      color: $accent2;
+      font-size: 25px;
+      color: $base;
       text-shadow: $shadow;
+      transition: 0.5s ease;
+
+      @include mq1 {
+        font-size: 30px;
+      }
     }
   }
 
@@ -56,25 +61,39 @@
 
   .word {
     &_1 {
-      letter-spacing: -0.015em;
+      letter-spacing: -0.4em;
+      @include mq1 {
+        letter-spacing: -0.015em;
+      }
     }
     &_2 {
-      letter-spacing: -0.02em;
+      letter-spacing: -0.4em;
+      @include mq1 {
+        letter-spacing: -0.02em;
+      }
     }
     &_3 {
-      letter-spacing: 0.05em;
+      letter-spacing: -0.4em;
+      @include mq1 {
+        letter-spacing: 0.05em;
+      }
     }
     &_4 {
-      letter-spacing: 0.05em;
+      letter-spacing: -0.35em;
+      @include mq1 {
+        letter-spacing: 0.05em;
+      }
     }
     &_5 {
-      letter-spacing: 0.05em;
+      letter-spacing: -0.35em;
+      @include mq1 {
+        letter-spacing: 0.05em;
+      }
     }
-    &_6 {
-      letter-spacing: -0.015em;
-    }
+    // &_6 {
+    // letter-spacing: -0.015em;
+    // }
   }
-
 
   .btn_humberger {
     width: 38px;
@@ -82,14 +101,24 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    transition: 0.2s ease;
+
+    @include mq1 {
+      width: 50px;
+      height: 40px;
+    }
 
     > span {
       display: block;
       width: inherit;
-      height: 5px;
-      border-radius: 10px;
-      background-color: $accent2;
+      height: 4px;
+      border-radius: 100px;
+      background-color: $base;
       box-shadow: $shadow;
+
+      @include mq1 {
+        height: 5px;
+      }
     }
   }
 }
@@ -112,19 +141,14 @@
   }
 
   .fa-twitter {
-    color:$twitter;
+    color: $twitter;
   }
 
   .fa-facebook {
-    color:$facebook;
+    color: $facebook;
   }
 
   .fa-instagram {
-    color:$instagram;
+    color: $instagram;
   }
-}
-
-.test {
-  height: 15000px;
-  background-color: $base;
 }
