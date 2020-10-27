@@ -36,10 +36,18 @@
   left: 0;
   padding: 20px;
   width: 100%;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include mq1 {
+    height: 110px;
+  }
+
+  // ==============================================
+  // ヘッダーロゴ
+  // ==============================================
 
   .header__logo {
     &-word {
@@ -47,7 +55,11 @@
       font-size: 25px;
       color: $base;
       text-shadow: $shadow;
-      transition: 0.5s ease;
+      transition: 0.3s ease;
+
+      &:hover {
+        text-shadow: $hover-shadow;
+      }
 
       @include mq1 {
         font-size: 30px;
@@ -61,31 +73,31 @@
 
   .word {
     &_1 {
-      letter-spacing: -0.4em;
+      letter-spacing: -0.15em;
       @include mq1 {
         letter-spacing: -0.015em;
       }
     }
     &_2 {
-      letter-spacing: -0.4em;
+      letter-spacing: -0.15em;
       @include mq1 {
         letter-spacing: -0.02em;
       }
     }
     &_3 {
-      letter-spacing: -0.4em;
+      letter-spacing: -0.1em;
       @include mq1 {
         letter-spacing: 0.05em;
       }
     }
     &_4 {
-      letter-spacing: -0.35em;
+      letter-spacing: -0.05em;
       @include mq1 {
         letter-spacing: 0.05em;
       }
     }
     &_5 {
-      letter-spacing: -0.35em;
+      letter-spacing: -0.05em;
       @include mq1 {
         letter-spacing: 0.05em;
       }
@@ -95,30 +107,47 @@
     // }
   }
 
+  // ==============================================
+  // ハンバーガーメニュー
+  // ==============================================
   .btn_humberger {
-    width: 38px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    border-radius: 100%;
+    border: 1px solid $base;
     transition: 0.2s ease;
-
+    position: relative;
     @include mq1 {
-      width: 50px;
-      height: 40px;
+      width: 70px;
+      height: 70px;
     }
 
     > span {
-      display: block;
-      width: inherit;
-      height: 4px;
-      border-radius: 100px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 1px;
       background-color: $base;
       box-shadow: $shadow;
+      transition: 0.2s ease;
+    }
 
-      @include mq1 {
-        height: 5px;
-      }
+    // 一番目の棒
+    > span:nth-of-type(2) {
+      top: 40%;
+    }
+
+    // 二番目の棒
+    > span:nth-of-type(1) {
+      top: 50%;
+    }
+
+    // 三番目の棒
+    > span:nth-of-type(3) {
+      top: 60%;
     }
   }
 }
@@ -140,14 +169,31 @@
     margin-left: 1em;
   }
 
+  .fab {
+    transition: 0.2s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  // ==============================================
+  // ツイッター
+  // ==============================================
   .fa-twitter {
     color: $twitter;
   }
 
+  // ==============================================
+  // フェイスブック
+  // ==============================================
   .fa-facebook {
     color: $facebook;
   }
 
+  // ==============================================
+  // インスタグラム
+  // ==============================================
   .fa-instagram {
     color: $instagram;
   }

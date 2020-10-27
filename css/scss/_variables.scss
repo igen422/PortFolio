@@ -14,7 +14,7 @@
   @media screen and (min-width: 765px) {
     @content
   }
-}
+};
 
 // ==============================================
 // Color
@@ -29,6 +29,8 @@ $accent2: #d9601a;
 $accent3: #59829A;
 
 $shadow: 0px 3px 6px rgba($main2, .3);
+$hover-shadow: -10px 10px 2px rgba($base, .5);
+
 
 // SNSアイコンカラー
 $twitter: #1DA1F2;
