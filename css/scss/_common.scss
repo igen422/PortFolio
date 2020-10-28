@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-// *,
-// *::before,
-// *::after {
-//   // outline: 1px solid red;
-// }
+*,
+*::before,
+*::after {
+  // outline: 1px solid red;
+}
 
 body {
   font-family: $ryo;
@@ -40,6 +40,11 @@ body {
     box-shadow: none;
     transform: translateY(-5px);
   }
-
 }
 
+// スマホのみ改行
+.break {
+  @include mq2 {
+    display: none;
+  }
+}
