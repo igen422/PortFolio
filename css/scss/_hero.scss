@@ -117,6 +117,10 @@
   letter-spacing: .1rem;
   text-shadow: $shadow;
 
+  >span {
+    animation: 4s scroll-effect infinite;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -128,6 +132,15 @@
     bottom: -120px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  @keyframes scroll-effect {
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 

@@ -1,18 +1,45 @@
 @charset "UTF-8";
 
-*,
-*::before,
-*::after {
-  // outline: 1px solid red;
-}
+// *,
+// *::before,
+// *::after {
+//   // outline: 1px solid red;
+// }
 
 body {
   font-family: $ryo;
+  color: $main2;
   // font-size: ;
 }
 
-// .wrapper {
-//   // outline: 1px solid red;
-//   // width: 90%;
-//   // margin: 0 auto;
-// }
+.wrapper {
+  // outline: 1px solid red;
+  width: 80%;
+  margin: 0 auto;
+}
+
+// ==============================================
+// ボタンホバー時の挙動
+// ==============================================
+.btn {
+  text-align: center;
+  display: inline-block;
+  color: $accent2;
+  font-size: 16px;
+  font-weight: $UH;
+  padding: 1.5rem 3rem;
+  letter-spacing: 0.2rem;
+  text-indent: 0.2rem;
+  border: 1px solid $accent2;
+  border-radius: 50px;
+  box-shadow: $shadow;
+  transition: 0.2s ease;
+  &:hover {
+    background-color: $accent2;
+    color: $base;
+    box-shadow: none;
+    transform: translateY(-5px);
+  }
+
+}
+

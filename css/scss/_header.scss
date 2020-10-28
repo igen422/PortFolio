@@ -27,7 +27,7 @@
 
 .header {
   position: relative;
-  z-index: 99;
+  z-index: 100;
 }
 
 .header__wrapperTop {
@@ -151,6 +151,19 @@
     }
   }
 }
+
+.btn_humberger {
+  &:hover {
+    background-color: $base;
+    border: 1px solid $accent2;
+
+
+    >span {
+      background-color: $accent2;
+    }
+  }
+}
+
 
 .header__wrapperBottom {
   position: fixed;
