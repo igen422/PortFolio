@@ -9,7 +9,23 @@
 body {
   font-family: $ryo;
   color: $main2;
-  // font-size: ;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  font-feature-settings: "palt";
+  letter-spacing: 0.2rem;
 }
 
 .wrapper {
@@ -38,7 +54,8 @@ body {
     background-color: $accent2;
     color: $base;
     box-shadow: none;
-    transform: translateY(-5px);
+    transform: translateY(5px);
+    letter-spacing: 0.1rem;
   }
 }
 

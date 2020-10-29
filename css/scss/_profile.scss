@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+.prof {
+  padding: 100px 0;
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: $B;
+  background-color: $base;
+  position: relative;
+  z-index: 99;
+
+  // ==============================================
+  // 背景SVG - いびつな丸
+  // ==============================================
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background-image: url(../../img/blob.svg);
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    z-index: -1;
+    opacity: 0.5;
+    transition: .2s ease;
+
+    @include mq1 {
+      top: 60%;
+      left: 15%;
+    }
+  }
+
+  // ==============================================
+  //  メインブロック
+  // ==============================================
+  .prof__main {
+    width: fit-content;
+    margin: 0 auto;
+    @include mq2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  // ==============================================
+  //  テキストブロック
+  // ==============================================
+
+  .prof__title {
+    line-height: 1.5;
+    font-weight: $UH;
+    font-size: 3.6rem;
+    
+  }
+
+  // .prof__textContainer {
+  // }
+  .prof__textBlock {
+    font-feature-settings: "palt";
+    letter-spacing: .2rem;
+  }
+
+  .prof__textBlock:first-of-type {
+    margin-top: 8rem;
+  }
+
+  .prof__textBlock:not(:first-of-type) {
+    margin-top: 2rem;
+  }
+}
+
+// 強調
+.prof__strong {
+  color: $accent2;
+  text-indent: 0.5rem;
+  letter-spacing: 0.2rem;
+  font-size: clamp(18px, 3vw, 22px);
+}
+
+// ルビ
+.prof__ruby {
+  color: $accent2;
+  // ruby-align: center; //ChromeやSafariでは使えない
+  text-align: start;
+	ruby-align: distribute-letter;
+	ruby-align: space-between;;
+}
+
+// ==============================================
+// ボタンブロック - 下層ページへの導き
+// ==============================================
+.prof__btnBlock {
+  text-align: center;
+  margin-top: 40px;
+  // display: flex;
+
+  @include mq2 {
+    width: 30%;
+    margin: 0 50px;
+  }
+}
+
+.prof__btnList {
+  &:not(:first-of-type) {
+    margin-top: 40px;
+
+    @include mq2 {
+      margin-top: 60px;
+    }
+  }
+}
+.prof__btn {
+  width: 250px;
+}

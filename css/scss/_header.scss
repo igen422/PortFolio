@@ -50,6 +50,13 @@
   // ==============================================
 
   .header__logo {
+    transform: translateY(-10px);
+
+    @include mq1 {
+      transform: none;
+    }
+    
+
     &-word {
       font-weight: $UH;
       font-size: 25px;
