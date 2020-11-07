@@ -18,18 +18,21 @@
     height: 300px;
     background-image: url(../../img/blob.svg);
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 7%;
     transform: translateY(-50%);
     z-index: -1;
     opacity: 0.5;
-    transition: .2s ease;
+    // transition: .2s ease;
+    animation: fuwafuwa 3s infinite linear alternate;
 
     @include mq1 {
-      top: 60%;
+      // top: 60%;
       left: 15%;
     }
   }
+
+  
 
   // ==============================================
   //  メインブロック
@@ -60,6 +63,7 @@
   .prof__textBlock {
     font-feature-settings: "palt";
     letter-spacing: .2rem;
+    line-height: 1.5;
   }
 
   .prof__textBlock:first-of-type {
@@ -93,7 +97,7 @@
 // ==============================================
 .prof__btnBlock {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 8rem;
   // display: flex;
 
   @include mq2 {

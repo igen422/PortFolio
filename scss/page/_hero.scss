@@ -48,7 +48,7 @@
 
 .hero {
 
-  // ネギボーイlarge
+  // ネギボーイlarge-SVG
   &::before {
     // outline: 1px solid red;
     content: ""; 
@@ -75,7 +75,7 @@
     }
   }
 
-  // ネギボーイMedius
+  // ネギボーイMedius-SVG
   &::after {
     // outline: 1px solid red;
     content: ""; 
@@ -117,7 +117,7 @@
   letter-spacing: .1rem;
   text-shadow: $shadow;
 
-  >span {
+  &-text {
     animation: 3.5s linear scroll-effect infinite;
   }
 
@@ -134,19 +134,5 @@
     transform: translateX(-50%);
   }
 
-  @keyframes scroll-effect {
-    10% {
-      opacity: 0.7;
-    }
-    50% {
-      opacity: 0;
-    }
-    80% {
-      opacity: .7;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 }
 

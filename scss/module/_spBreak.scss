@@ -1,0 +1,7 @@
+
+// スマホのみ改行
+.break {
+  @include mq2 {
+    display: none;
+  }
+}

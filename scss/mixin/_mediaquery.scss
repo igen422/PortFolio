@@ -1,0 +1,14 @@
+
+// 765pxまで
+@mixin mq1 {
+  @media screen and (min-width: 765px) {
+    @content
+  }
+};
+
+// 1000pxまで
+@mixin mq2 {
+  @media screen and (min-width: 1000px) {
+    @content
+  }
+};

@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+.sample path {
+  // width: 300px;
+}
+
+.test {
+  width: 200px;
+  clip-path: url(.clip01);
+}
 // 地元の金物卸売会社に就職。商品管理チームに配属。
 // 国内から海外まで
 

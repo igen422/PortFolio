@@ -1,0 +1,18 @@
+// 10px上に浮く
+@mixin hover-floatTop {
+  transform: translateY(-5px);
+}
+
+// ハンバーガーメニュー
+@mixin hover-humberger {
+  background-color: $base;
+  border: 1px solid $accent2;
+  .btn_humberger-item {
+    background-color: $accent2;
+  }
+}
+
+// テキストシャドウが出現する
+@mixin hover-textShadow {
+  text-shadow: $hover-shadow;
+}

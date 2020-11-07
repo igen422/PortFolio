@@ -1,0 +1,41 @@
+
+*,
+*::before,
+*::after {
+  // outline: 1px solid red;
+}
+
+body {
+  font-family: $ryo;
+  color: $main2;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  font-feature-settings: "palt";
+  letter-spacing: 0.2rem;
+}
+
+.wrapper {
+  // outline: 1px solid red;
+  width: 80%;
+  margin: 0 auto;
+}
+
+// ==============================================
+// ルビ要素の字間調整を可能にする。
+// ==============================================
+rt {
+  text-align: inherit;
+}
